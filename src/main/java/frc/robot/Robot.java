@@ -50,8 +50,8 @@ public class Robot extends IterativeRobot
   Joystick rStick = new Joystick(1);
 
 
-  //XboxController xCont = new XboxController(2);
-  XboxArcade xCont = new XboxArcade(2, Hand.kLeft);
+  XboxController xCont = new XboxController(2);
+  XboxArcade xContArCon = new XboxArcade(2, Hand.kLeft);
   //snowblower motor for frisbee shooter
   WPI_TalonSRX modTalon1 = new WPI_TalonSRX(3);
   //CIM motor for frisbee shooter
@@ -180,7 +180,7 @@ public class Robot extends IterativeRobot
     
     if (mode==4)//xbox tank/arcade control
     {
-      theTank.drive(xCont.GetDrive());
+      theTank.drive(xContArCon.GetDrive());
 
 
     }
